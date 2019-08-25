@@ -5,4 +5,6 @@
     <color name="colorAccent">#FF4081</color>
     <color name="actionButton">#F57C00</color>
     <color name="numberButton">#455A64</color>
+    <color name="pureBlack">#000000</color>
+    <color name="pure">#ab003c</color>
 </resources>

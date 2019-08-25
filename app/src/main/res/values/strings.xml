@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">AynCalculator</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+    <string name="title_activity_navigation">Navigation</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="kg">kg</string>
+    <string name="lb">lb</string>
+
+
+    <string name="aboutName">Ayon Roy</string>
+    <string name="aboutRoll">Roll: 201714018</string>
+    <string name="aboutDept">CSE-17</string>
+
+
+
 </resources>

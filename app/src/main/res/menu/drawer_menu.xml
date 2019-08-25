@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_standard"
+            android:icon="@drawable/ic_main"
+            android:title="Main" />
+        <item
+            android:id="@+id/nav_temp"
+            android:icon="@drawable/ic_temp"
+            android:title="Temperature" />
+        <item
+            android:id="@+id/nav_weight"
+            android:icon="@drawable/ic_weight"
+            android:title="Weight" />
+        <item
+            android:id="@+id/nav_us"
+            android:icon="@drawable/ic_us"
+            android:title="About US" />
+
+        <item
+            android:id="@+id/nav_exit"
+            android:icon="@drawable/ic_exit"
+            android:title="Exit" />
+    </group>
+
+</menu>
