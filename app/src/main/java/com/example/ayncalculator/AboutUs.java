@@ -8,6 +8,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Process;
 import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
@@ -71,10 +72,17 @@ public class AboutUs extends AppCompatActivity implements NavigationView.OnNavig
         } else if(id==R.id.nav_us){
             Intent intent = new Intent(getApplicationContext(), AboutUs.class);
             startActivity(intent);
-        }  else if(id==R.id.nav_exit){
+        } else if(id==R.id.nav_history) {
+            Intent intent = new Intent(getApplicationContext(), History.class);
+            startActivity(intent);
+        } else if(id==R.id.nav_exit){
             finish();
-            System.exit(0);
         }
         return false;
+    }
+    @Override
+    protected void onDestroy() {
+        Process.killProcess(Process.myPid());
+        super.onDestroy();
     }
 }

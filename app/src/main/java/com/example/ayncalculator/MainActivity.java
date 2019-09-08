@@ -8,12 +8,14 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Process;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
@@ -27,6 +29,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private TextView expr,result,ce,openBrc,closeBrc,div,mul,minus,plus,dot,back,equals;
     private TextView zero,one,two,three,four,five,six,seven,eight,nine;
     private TextView sin,cos,tan,pow,sqroot,fact;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,6 +91,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         seven = findViewById(R.id.seven);
         eight = findViewById(R.id.eight);
         nine = findViewById(R.id.nine);
+
 
 
         // Numbers
@@ -259,10 +264,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     Expression expression = new ExpressionBuilder(expr.getText().toString()).build();
                     double reslt = expression.evaluate();
                     int intres = (int) reslt;
+                    String inputExpr = expr.getText().toString();
+                    String finalResult;
                     if (reslt == intres) {
                         result.setText(Integer.toString(intres));
+                        finalResult = Integer.toString(intres);
                     } else {
                         result.setText(Double.toString(reslt));
+                        finalResult = Double.toString(reslt);
+                    }
+
+                    try {
+                        dbMiddleware dbM = new dbMiddleware(inputExpr, finalResult, "Main");
+                        dbM.writeDB();
+                        Toast.makeText(MainActivity.this, "Stored in Database!", Toast.LENGTH_LONG).show();
+                    } catch (Exception e) {
+                        Toast.makeText(MainActivity.this, "Failed to Store in Database!", Toast.LENGTH_LONG).show();
                     }
                 } catch (Exception e) {
                     result.setText("Invalid Op!");
@@ -310,11 +327,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if(id==R.id.nav_us){
             Intent intent = new Intent(getApplicationContext(), AboutUs.class);
             startActivity(intent);
-        }  else if(id==R.id.nav_exit){
+        } else if(id==R.id.nav_history) {
+            Intent intent = new Intent(getApplicationContext(), History.class);
+            startActivity(intent);
+        } else if(id==R.id.nav_exit){
             finish();
-            System.exit(0);
         }
         return false;
+    }
+
+    @Override
+    protected void onDestroy() {
+        Process.killProcess(Process.myPid());
+        super.onDestroy();
     }
 
     void appendOnExpr(String string , Boolean canClear){

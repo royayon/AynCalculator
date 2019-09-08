@@ -17,6 +17,10 @@
             android:icon="@drawable/ic_weight"
             android:title="Weight" />
         <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/ic_history"
+            android:title="History" />
+        <item
             android:id="@+id/nav_us"
             android:icon="@drawable/ic_us"
             android:title="About US" />
@@ -25,6 +29,7 @@
             android:id="@+id/nav_exit"
             android:icon="@drawable/ic_exit"
             android:title="Exit" />
+
     </group>
 
 </menu>

@@ -26,6 +26,7 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             android:elevation="4dp"
+            app:title="About Me"
             />
 
         <TextView

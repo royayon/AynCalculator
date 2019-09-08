@@ -8,9 +8,11 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Process;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -206,16 +208,30 @@ public class Temp extends AppCompatActivity implements NavigationView.OnNavigati
                 try {
                     double input = Double.parseDouble(expr.getText().toString());
                     double reslt;
+                    String calcType;
                     if(c2f){
+                        calcType = " (Celsius 2 Fahrenheit)";
                         reslt = ((9*input)/5) + 32; // Celcious to Faren
                     } else {
+                        calcType = " (Fahrenheit 2 Celsius)";
                         reslt = 5 * (input-32)/9 ;
                     }
                     int intres = (int) reslt;
+                    String finalResult;
                     if (reslt == intres) {
                         result.setText(Integer.toString(intres));
+                        finalResult = Integer.toString(intres);
                     } else {
                         result.setText(Double.toString(reslt));
+                        finalResult = Double.toString(reslt);
+                    }
+
+                    try {
+                        dbMiddleware dbM = new dbMiddleware(expr.getText().toString(), finalResult, "Temperature" + calcType);
+                        dbM.writeDB();
+                        Toast.makeText(Temp.this, "Stored in Database!", Toast.LENGTH_LONG).show();
+                    } catch (Exception e) {
+                        Toast.makeText(Temp.this, "Failed to Store in Database!", Toast.LENGTH_LONG).show();
                     }
                 } catch (Exception e) {
                     result.setText("Invalid Op!");
@@ -262,11 +278,18 @@ public class Temp extends AppCompatActivity implements NavigationView.OnNavigati
         } else if(id==R.id.nav_us){
             Intent intent = new Intent(getApplicationContext(), AboutUs.class);
             startActivity(intent);
-        }  else if(id==R.id.nav_exit){
+        } else if(id==R.id.nav_history) {
+            Intent intent = new Intent(getApplicationContext(), History.class);
+            startActivity(intent);
+        } else if(id==R.id.nav_exit){
             finish();
-            System.exit(0);
         }
         return false;
+    }
+    @Override
+    protected void onDestroy() {
+        Process.killProcess(Process.myPid());
+        super.onDestroy();
     }
 
     void appendOnExpr(String string , Boolean canClear){

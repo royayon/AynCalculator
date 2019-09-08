@@ -27,6 +27,7 @@
             android:background="@color/pureBlack"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             android:elevation="4dp"
+            app:title="Temperature"
             />
 
 

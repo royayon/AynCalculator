@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "43899465412",
+    "firebase_url": "https://ayncalculator.firebaseio.com",
+    "project_id": "ayncalculator",
+    "storage_bucket": "ayncalculator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:43899465412:android:44e2110141abeddd1ba391",
+        "android_client_info": {
+          "package_name": "com.example.ayncalculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "43899465412-dflftodkifvhr0jibh4vodn230gj8km7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1jrKkcJTND_dz9tN5Wug38QIobvMkRvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "43899465412-dflftodkifvhr0jibh4vodn230gj8km7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

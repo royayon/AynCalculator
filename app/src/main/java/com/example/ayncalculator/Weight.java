@@ -8,9 +8,11 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Process;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -206,16 +208,30 @@ public class Weight extends AppCompatActivity implements NavigationView.OnNaviga
                 try {
                     double input = Double.parseDouble(expr.getText().toString());
                     double reslt;
+                    String calcType;
                     if(k2l){
+                        calcType = " (KG 2 Pounds)";
                         reslt = 2.2046 * input;
                     } else {
+                        calcType = " (Pounds 2 KG)";
                         reslt = 0.45359 * input;
                     }
                     int intres = (int) reslt;
+                    String finalResult;
                     if (reslt == intres) {
                         result.setText(Integer.toString(intres));
+                        finalResult = Integer.toString(intres);
                     } else {
                         result.setText(Double.toString(reslt));
+                        finalResult = Double.toString(reslt);
+                    }
+
+                    try {
+                        dbMiddleware dbM = new dbMiddleware(expr.getText().toString(), finalResult, "Weight" + calcType);
+                        dbM.writeDB();
+                        Toast.makeText(Weight.this, "Stored in Database!", Toast.LENGTH_LONG).show();
+                    } catch (Exception e) {
+                        Toast.makeText(Weight.this, "Failed to Store in Database!", Toast.LENGTH_LONG).show();
                     }
                 } catch (Exception e) {
                     result.setText("Invalid Op!");
@@ -262,11 +278,19 @@ public class Weight extends AppCompatActivity implements NavigationView.OnNaviga
         } else if(id==R.id.nav_us){
             Intent intent = new Intent(getApplicationContext(), AboutUs.class);
             startActivity(intent);
-        }  else if(id==R.id.nav_exit){
+        } else if(id==R.id.nav_history) {
+            Intent intent = new Intent(getApplicationContext(), History.class);
+            startActivity(intent);
+        } else if(id==R.id.nav_exit){
             finish();
-            System.exit(0);
         }
         return false;
+    }
+
+    @Override
+    protected void onDestroy() {
+        Process.killProcess(Process.myPid());
+        super.onDestroy();
     }
 
     void appendOnExpr(String string , Boolean canClear){
