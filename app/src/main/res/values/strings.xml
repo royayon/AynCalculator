@@ -16,4 +16,10 @@
     <string name="aboutDept">CSE-17</string>
 
 
+
+    <string-array name="weights">
+        <item>kg</item>
+        <item>lb</item>
+    </string-array>
+
 </resources>

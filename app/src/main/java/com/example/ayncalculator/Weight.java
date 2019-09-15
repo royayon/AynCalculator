@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Process;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,8 @@ public class Weight extends AppCompatActivity implements NavigationView.OnNaviga
     private TextView expr,result,ce,openBrc,closeBrc,div,mul,minus,plus,dot,back,equals;
     private TextView zero,one,two,three,four,five,six,seven,eight,nine;
     private TextView topLvl,btmLvl,rev,sin,cos,tan,pow,sqroot,fact;
+
+    //private Spinner topLvl,btmLvl;
 
     private boolean k2l = true;
     @Override
@@ -147,16 +150,14 @@ public class Weight extends AppCompatActivity implements NavigationView.OnNaviga
         });
 
 
+
+
         rev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(k2l) {
-                    topLvl.setText("lb");
-                    btmLvl.setText("kg");
-                } else {
-                    topLvl.setText("kg");
-                    btmLvl.setText("lb");
-                }
+                String temp = topLvl.getText().toString();
+                topLvl.setText(btmLvl.getText().toString());
+                btmLvl.setText(temp);
                 k2l = !k2l;
                 try {
                     double input = Double.parseDouble(expr.getText().toString());
