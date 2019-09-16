@@ -18,7 +18,7 @@
             android:title="Weight" />
         <item
             android:id="@+id/nav_length"
-            android:icon="@drawable/ic_temp"
+            android:icon="@drawable/ic_length"
             android:title="Length" />
         <item
             android:id="@+id/nav_history"
