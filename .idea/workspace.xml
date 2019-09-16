@@ -11,8 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56eeb488-b5e8-4d0e-9709-5fbed0ebeb57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ayncalculator/Volume.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_volume.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ayncalculator/AboutUs.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ayncalculator/AboutUs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ayncalculator/Length.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ayncalculator/Length.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ayncalculator/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ayncalculator/MainActivity.java" afterDir="false" />
@@ -84,8 +82,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ayncalculator/Volume.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1366">
-              <caret line="219" column="39" lean-forward="true" selection-start-line="219" selection-start-column="39" selection-end-line="219" selection-end-column="39" />
+            <state relative-caret-position="306">
+              <caret line="308" column="14" lean-forward="true" selection-start-line="308" selection-start-column="14" selection-end-line="308" selection-end-column="14" />
               <folding>
                 <element signature="e#1794#1825#0" expanded="true" />
                 <element signature="e#1827#1859#0" expanded="true" />
@@ -288,7 +286,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="device.picker.selection" value="HXT7N18321010324" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
@@ -720,8 +718,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/ayncalculator/Volume.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1366">
-          <caret line="219" column="39" lean-forward="true" selection-start-line="219" selection-start-column="39" selection-end-line="219" selection-end-column="39" />
+        <state relative-caret-position="306">
+          <caret line="308" column="14" lean-forward="true" selection-start-line="308" selection-start-column="14" selection-end-line="308" selection-end-column="14" />
           <folding>
             <element signature="e#1794#1825#0" expanded="true" />
             <element signature="e#1827#1859#0" expanded="true" />
