@@ -30,6 +30,10 @@
             android:icon="@drawable/ic_length"
             android:title="Volume" />
         <item
+            android:id="@+id/nav_length1"
+            android:icon="@drawable/ic_length"
+            android:title="Length1" />
+        <item
             android:id="@+id/nav_history"
             android:icon="@drawable/ic_history"
             android:title="History" />

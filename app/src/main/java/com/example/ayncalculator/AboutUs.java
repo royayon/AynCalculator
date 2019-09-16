@@ -78,6 +78,9 @@ public class AboutUs extends AppCompatActivity implements NavigationView.OnNavig
         }else if(id==R.id.nav_currency){
             Intent intent = new Intent(getApplicationContext(), Currency.class);
             startActivity(intent);
+        } else if(id==R.id.nav_length1){
+            Intent intent = new Intent(getApplicationContext(), Length1.class);
+            startActivity(intent);
         } else if(id==R.id.nav_us){
             Intent intent = new Intent(getApplicationContext(), AboutUs.class);
             startActivity(intent);

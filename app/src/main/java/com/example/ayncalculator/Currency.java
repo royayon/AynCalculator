@@ -284,6 +284,9 @@ public class Currency extends AppCompatActivity implements NavigationView.OnNavi
         }else if(id==R.id.nav_currency) {
             Intent intent = new Intent(getApplicationContext(), Currency.class);
             startActivity(intent);
+        } else if(id==R.id.nav_length1){
+            Intent intent = new Intent(getApplicationContext(), Length1.class);
+            startActivity(intent);
         }
         else if(id==R.id.nav_exit){
             finish();
