@@ -26,6 +26,15 @@
             android:name=".Length"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
+            android:name=".Currency"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Volume"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Length1"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
