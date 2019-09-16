@@ -32,7 +32,7 @@ public class Volume extends AppCompatActivity implements NavigationView.OnNaviga
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_temp);
+        setContentView(R.layout.activity_volume);
 
 
         // id linking
@@ -151,18 +151,18 @@ public class Volume extends AppCompatActivity implements NavigationView.OnNaviga
             @Override
             public void onClick(View view) {
                 if(g2l) {
-                    topLvl.setText("F");
-                    btmLvl.setText("C");
+                    topLvl.setText("G");
+                    btmLvl.setText("L");
                 } else {
-                    topLvl.setText("C");
-                    btmLvl.setText("F");
+                    topLvl.setText("L");
+                    btmLvl.setText("G");
                 }
                 g2l = !g2l;
                 try {
                     double input = Double.parseDouble(expr.getText().toString());
                     double reslt;
                     if(g2l){
-                        reslt = 4.54609*input; // Celcious to Faren
+                        reslt = 4.54609*input;
                     } else {
                         reslt = 0.213*input;
                     }

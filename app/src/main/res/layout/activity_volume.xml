@@ -49,7 +49,7 @@
 
             <TextView
                 android:id="@+id/topLvl"
-                android:text="C"
+                android:text="G"
                 android:layout_width="match_parent"
                 android:layout_height="140sp"
                 android:ellipsize="start"
@@ -78,7 +78,7 @@
 
             <TextView
                 android:id="@+id/btmLvl"
-                android:text="F"
+                android:text="L"
                 android:layout_width="match_parent"
                 android:layout_height="140sp"
                 android:ellipsize="end"
