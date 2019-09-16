@@ -275,7 +275,10 @@ public class Temp extends AppCompatActivity implements NavigationView.OnNavigati
         } else if(id==R.id.nav_weight){
             Intent intent = new Intent(getApplicationContext(), Weight.class);
             startActivity(intent);
-        } else if(id==R.id.nav_length) {
+        } else if(id==R.id.nav_currency){
+            Intent intent = new Intent(getApplicationContext(), Currency.class);
+            startActivity(intent);
+        }else if(id==R.id.nav_length) {
             Intent intent = new Intent(getApplicationContext(), Length.class);
             startActivity(intent);
         }  else if(id==R.id.nav_volume){

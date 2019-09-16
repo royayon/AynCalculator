@@ -324,6 +324,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if(id==R.id.nav_weight){
             Intent intent = new Intent(getApplicationContext(), Weight.class);
             startActivity(intent);
+        }else if(id==R.id.nav_currency){
+            Intent intent = new Intent(getApplicationContext(), Currency.class);
+            startActivity(intent);
         } else if(id==R.id.nav_length) {
             Intent intent = new Intent(getApplicationContext(), Length.class);
             startActivity(intent);

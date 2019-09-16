@@ -16,6 +16,11 @@
             android:id="@+id/nav_weight"
             android:icon="@drawable/ic_weight"
             android:title="Weight" />
+
+        <item
+            android:id="@+id/nav_currency"
+            android:icon="@drawable/ic_weight"
+            android:title="Currency" />
         <item
             android:id="@+id/nav_length"
             android:icon="@drawable/ic_length"
