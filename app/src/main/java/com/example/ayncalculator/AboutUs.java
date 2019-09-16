@@ -29,7 +29,7 @@ public class AboutUs extends AppCompatActivity implements NavigationView.OnNavig
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = findViewById(R.id.nav_view);//navigation bar's item select korer jonno object create
+        NavigationView navigationView = findViewById(R.id.nav_view);//navigation bar item select korer jonno object create
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener(this);//enable
     }
