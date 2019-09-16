@@ -11,8 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56eeb488-b5e8-4d0e-9709-5fbed0ebeb57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_length.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/drawer_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/drawer_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +42,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/drawer_menu.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="279">
@@ -51,6 +50,16 @@
             </state>
           </provider>
           <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -102,7 +111,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/FirestoreRecyclerOptions.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ayncalculator/HistoryAdapter.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_history.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_about_us.xml" />
@@ -117,6 +125,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ayncalculator/Temp.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/ayncalculator/Weight.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/drawer_menu.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -532,14 +541,6 @@
     <entry file="file://$PROJECT_DIR$/app/build/generated/res/google-services/debug/values/values.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -632,6 +633,14 @@
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

@@ -23,6 +23,9 @@
             android:name=".Temp"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
+            android:name=".Length"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
