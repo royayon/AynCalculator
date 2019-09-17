@@ -136,14 +136,14 @@ public class History extends AppCompatActivity implements NavigationView.OnNavig
         } else if(id==R.id.nav_weight){
             Intent intent = new Intent(getApplicationContext(), Weight.class);
             startActivity(intent);
-        } else if(id==R.id.nav_length) {
-            Intent intent = new Intent(getApplicationContext(), Length.class);
-            startActivity(intent);
         } else if(id==R.id.nav_currency){
             Intent intent = new Intent(getApplicationContext(), Currency.class);
             startActivity(intent);
-        } else if(id==R.id.nav_length1){
-            Intent intent = new Intent(getApplicationContext(), Length1.class);
+        }else if(id==R.id.nav_length) {
+            Intent intent = new Intent(getApplicationContext(), Length.class);
+            startActivity(intent);
+        }  else if(id==R.id.nav_volume){
+            Intent intent = new Intent(getApplicationContext(), Volume.class);
             startActivity(intent);
         } else if(id==R.id.nav_us){
             Intent intent = new Intent(getApplicationContext(), AboutUs.class);

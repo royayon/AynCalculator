@@ -151,20 +151,20 @@ public class Currency extends AppCompatActivity implements NavigationView.OnNavi
             @Override
             public void onClick(View view) {
                 if(bdt2dollar) {
-                    topLvl.setText("BDT");
-                    btmLvl.setText("Dollar");
+                    topLvl.setText("$");
+                    btmLvl.setText("Tk");
                 } else {
-                    topLvl.setText("Dollar");
-                    btmLvl.setText("BDT");
+                    topLvl.setText("Tk");
+                    btmLvl.setText("$");
                 }
                 bdt2dollar = !bdt2dollar;
                 try {
                     double input = Double.parseDouble(expr.getText().toString());
                     double reslt;
                     if(bdt2dollar){
-                        reslt = input * 84.50; // Celcious to Faren
+                        reslt = input * 0.012; // Celcious to Faren
                     } else {
-                        reslt = input * 0.012 ;
+                        reslt = input * 84.50 ;
                     }
                     int intres = (int) reslt;
                     if (reslt == intres) {
@@ -211,10 +211,10 @@ public class Currency extends AppCompatActivity implements NavigationView.OnNavi
                     String calcType;
                     if(bdt2dollar){
                         calcType = " (BDT 2 DOLLAR)";
-                        reslt = input * 84.50; // Celcious to Faren
+                        reslt = input * 0.012; // Celcious to Faren
                     } else {
                         calcType = " (DOLLAR 2 BDT)";
-                        reslt = input * 0.012 ;
+                        reslt = input * 84.50 ;
                     }
                     int intres = (int) reslt;
                     String finalResult;
@@ -275,20 +275,22 @@ public class Currency extends AppCompatActivity implements NavigationView.OnNavi
         } else if(id==R.id.nav_weight){
             Intent intent = new Intent(getApplicationContext(), Weight.class);
             startActivity(intent);
+        } else if(id==R.id.nav_currency){
+            Intent intent = new Intent(getApplicationContext(), Currency.class);
+            startActivity(intent);
+        }else if(id==R.id.nav_length) {
+            Intent intent = new Intent(getApplicationContext(), Length.class);
+            startActivity(intent);
+        }  else if(id==R.id.nav_volume){
+            Intent intent = new Intent(getApplicationContext(), Volume.class);
+            startActivity(intent);
         } else if(id==R.id.nav_us){
             Intent intent = new Intent(getApplicationContext(), AboutUs.class);
             startActivity(intent);
         } else if(id==R.id.nav_history) {
             Intent intent = new Intent(getApplicationContext(), History.class);
             startActivity(intent);
-        }else if(id==R.id.nav_currency) {
-            Intent intent = new Intent(getApplicationContext(), Currency.class);
-            startActivity(intent);
-        } else if(id==R.id.nav_length1){
-            Intent intent = new Intent(getApplicationContext(), Length1.class);
-            startActivity(intent);
-        }
-        else if(id==R.id.nav_exit){
+        } else if(id==R.id.nav_exit){
             finish();
         }
         return false;

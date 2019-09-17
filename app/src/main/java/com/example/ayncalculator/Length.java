@@ -151,20 +151,20 @@ public class Length extends AppCompatActivity implements NavigationView.OnNaviga
             @Override
             public void onClick(View view) {
                 if(i2m) {
-                    topLvl.setText("in");
-                    btmLvl.setText("m");
-                } else {
                     topLvl.setText("m");
                     btmLvl.setText("in");
+                } else {
+                    topLvl.setText("in");
+                    btmLvl.setText("m");
                 }
                 i2m = !i2m;
                 try {
                     double input = Double.parseDouble(expr.getText().toString());
                     double reslt;
                     if(i2m){
-                        reslt = 39.3701 * input; // Celcious to Faren
+                        reslt = 0.0254 * input; // Celcious to Faren
                     } else {
-                        reslt = 0.0254 * input ;
+                        reslt =  39.3701 * input ;
                     }
                     int intres = (int) reslt;
                     if (reslt == intres) {
@@ -211,10 +211,10 @@ public class Length extends AppCompatActivity implements NavigationView.OnNaviga
                     String calcType;
                     if(i2m){
                         calcType = " (inches to meters)";
-                        reslt = 39.3701 * input; // Celcious to Faren
+                        reslt = 0.0254 * input; // Celcious to Faren
                     } else {
                         calcType = " (meters to inches)";
-                        reslt = 0.0254 * input ;
+                        reslt = 39.3701 * input ;
                     }
                     int intres = (int) reslt;
                     String finalResult;
@@ -278,11 +278,8 @@ public class Length extends AppCompatActivity implements NavigationView.OnNaviga
         } else if(id==R.id.nav_length) {
             Intent intent = new Intent(getApplicationContext(), Length.class);
             startActivity(intent);
-        }else if(id==R.id.nav_currency){
+        } else if(id==R.id.nav_currency){
             Intent intent = new Intent(getApplicationContext(), Currency.class);
-            startActivity(intent);
-        } else if(id==R.id.nav_length1){
-            Intent intent = new Intent(getApplicationContext(), Length1.class);
             startActivity(intent);
         } else if(id==R.id.nav_volume){
             Intent intent = new Intent(getApplicationContext(), Volume.class);

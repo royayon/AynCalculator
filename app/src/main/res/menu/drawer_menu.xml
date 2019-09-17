@@ -19,7 +19,7 @@
 
         <item
             android:id="@+id/nav_currency"
-            android:icon="@drawable/ic_weight"
+            android:icon="@drawable/ic_currency"
             android:title="Currency" />
         <item
             android:id="@+id/nav_length"
@@ -27,12 +27,12 @@
             android:title="Length" />
         <item
             android:id="@+id/nav_volume"
-            android:icon="@drawable/ic_length"
+            android:icon="@drawable/ic_volume"
             android:title="Volume" />
-        <item
+        <!--<item
             android:id="@+id/nav_length1"
             android:icon="@drawable/ic_length"
-            android:title="Length1" />
+            android:title="Length1" />-->
         <item
             android:id="@+id/nav_history"
             android:icon="@drawable/ic_history"

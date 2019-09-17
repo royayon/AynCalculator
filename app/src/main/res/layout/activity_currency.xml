@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Temp">
+    tools:context=".Volume">
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
@@ -39,24 +39,24 @@
 
             <TextView
                 android:id="@+id/expr"
-                android:layout_width="320dp"
+                android:layout_width="290dp"
                 android:layout_height="140sp"
                 android:ellipsize="start"
                 android:gravity="end"
                 android:singleLine="true"
                 android:textColor="@android:color/white"
-                android:textSize="60sp"/>
+                android:textSize="60dp"/>
 
             <TextView
                 android:id="@+id/topLvl"
-                android:text="BDT"
+                android:text="Tk"
                 android:layout_width="match_parent"
                 android:layout_height="140sp"
                 android:ellipsize="start"
                 android:gravity="end"
                 android:singleLine="true"
                 android:textColor="@android:color/white"
-                android:textSize="30sp" />
+                android:textSize="60dp" />
 
 
         </LinearLayout>
@@ -68,24 +68,24 @@
 
             <TextView
                 android:id="@+id/result"
-                android:layout_width="320dp"
+                android:layout_width="290dp"
                 android:layout_height="140sp"
                 android:ellipsize="end"
                 android:gravity="end"
                 android:singleLine="true"
                 android:textColor="@color/actionButton"
-                android:textSize="60sp" />
+                android:textSize="60dp" />
 
             <TextView
                 android:id="@+id/btmLvl"
-                android:text="Dollar"
+                android:text="$"
                 android:layout_width="match_parent"
                 android:layout_height="140sp"
                 android:ellipsize="end"
                 android:gravity="end"
                 android:singleLine="true"
                 android:textColor="@color/actionButton"
-                android:textSize="30sp"/>
+                android:textSize="60dp"/>
         </LinearLayout>
 
 
